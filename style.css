@@ -1,0 +1,549 @@
+/* style.css */
+
+:root {
+    --primary-color: #8a2be2;
+    --secondary-color: #4169e1;
+    --background-color: #121212;
+    --text-color: #ffffff;
+    --glass-background: rgba(255, 255, 255, 0.1);
+    --glass-border: 1px solid rgba(255, 255, 255, 0.18);
+    --glass-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 1rem;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo img {
+    height: 40px;
+}
+
+nav ul {
+    display: flex;
+    list-style-type: none;
+}
+
+nav ul li {
+    margin-left: 1rem;
+}
+
+nav ul li a {
+    color: var(--text-color);
+    text-decoration: none;
+}
+
+main {
+    padding: 2rem;
+}
+
+.hero {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+h1 {
+    font-size: 3rem;
+    color: var(--primary-color);
+}
+
+.slogan {
+    font-size: 1.5rem;
+    color: var(--secondary-color);
+}
+
+.game-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.game-card {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 1rem;
+    border-radius: 10px;
+    text-align: center;
+    background: var(--glass-background);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    border-radius: 10px;
+    border: var(--glass-border);
+    box-shadow: var(--glass-shadow);
+}
+
+.game-card img {
+    width: 100%;
+    border-radius: 5px;
+}
+
+.btn {
+    display: inline-block;
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    text-decoration: none;
+    margin-top: 1rem;
+}
+
+.careers-cta {
+    text-align: center;
+    margin-top: 3rem;
+    padding: 2rem;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    background: var(--glass-background);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    border-radius: 10px;
+    border: var(--glass-border);
+    box-shadow: var(--glass-shadow);
+}
+
+footer {
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-logo img {
+    height: 30px;
+}
+
+.social-links a {
+    color: var(--text-color);
+    text-decoration: none;
+    margin-left: 1rem;
+}
+
+/* Continuation of style.css */
+
+/* Game Description Page */
+.game-hero {
+    position: relative;
+    height: 80vh;
+    overflow: hidden;
+}
+
+.game-hero video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-bottom-left-radius: 50%;
+    border-bottom-right-radius: 50%;
+	object-position: center 10%; /* Align the video to the top, cropping off the bottom */
+}
+
+.game-info {
+    text-align: center;
+    padding: 2rem 0;
+}
+
+.game-description {
+    max-width: 800px;
+    margin: 1rem auto;
+}
+
+.game-features {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-top: 3rem;
+}
+
+.feature {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    max-width: 800px;
+    margin-bottom: 2rem;
+}
+
+.feature img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-right: 1rem;
+}
+
+.feature-text {
+    flex: 1;
+}
+
+/* Games Page */
+.games-list h1 {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+/* Careers Page */
+.careers {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.careers h1 {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.careers-content {
+    display: flex;
+    align-items: flex-start;
+    gap: 2rem;
+}
+
+.careers-image {
+    width: 50%;
+    max-width: 600px;
+    border-radius: 10px;
+}
+
+.job-listings {
+    flex: 1;
+}
+
+.job-category {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 1rem;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+    background: var(--glass-background);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    border-radius: 10px;
+    border: var(--glass-border);
+    box-shadow: var(--glass-shadow);
+}
+
+.job-category h3 {
+    color: var(--secondary-color);
+    margin-top: 0;
+}
+
+.job-category select {
+    width: 100%;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    border: 1px solid var(--primary-color);
+    border-radius: 5px;
+}
+
+.job-description {
+    margin-bottom: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .game-grid {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+
+    .feature {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .feature img {
+        margin-right: 0;
+        margin-bottom: 1rem;
+    }
+
+    .careers-content {
+        flex-direction: column;
+    }
+
+    .careers-image {
+        width: 100%;
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    nav {
+        flex-direction: column;
+    }
+
+    nav ul {
+        margin-top: 1rem;
+    }
+
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .slogan {
+        font-size: 1rem;
+    }
+}
+
+/* Add these new styles and animations to your existing style.css file */
+
+/* General Animations */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideIn {
+    from { transform: translateY(20px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+/* Apply animations to various elements */
+.hero, .game-card, .news-card, .about-content, .news-article {
+    animation: fadeIn 0.5s ease-out;
+}
+
+h1, h2, h3 {
+    animation: slideIn 0.5s ease-out;
+}
+
+/* Hover effects */
+.btn, .social-icon, nav ul li a {
+    transition: all 0.3s ease;
+}
+
+.btn:hover, .social-icon:hover, nav ul li a:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* FAQ Dropdown Animation */
+/* FAQ Dropdown Styles and Animation */
+.faq-item {
+    margin-bottom: 1rem;
+}
+
+.faq-question {
+    background: var(--glass-background);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    border-radius: 10px;
+    border: var(--glass-border);
+    box-shadow: var(--glass-shadow);
+    padding: 1rem;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: background-color 0.3s ease, border-radius 0.3s ease;
+}
+
+.faq-question:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.faq-answer {
+    overflow: hidden;
+    background: var(--glass-background);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    border-radius: 0 0 10px 10px;
+    border: var(--glass-border);
+    border-top: none;
+    box-shadow: var(--glass-shadow);
+    transition: height 0.3s ease-out, opacity 0.3s ease-out, padding 0.3s ease-out;
+    height: 0;
+    opacity: 0;
+    padding: 0 1rem;
+}
+
+.faq-item.active .faq-question {
+    border-radius: 10px 10px 0 0;
+}
+
+.faq-item.active .faq-answer {
+    opacity: 1;
+    padding: 1rem;
+}
+
+.plus-sign {
+    font-size: 1.5rem;
+    transition: transform 0.3s ease;
+}
+
+.faq-item.active .plus-sign {
+    transform: rotate(45deg);
+}
+
+/* About Page Styles */
+.about {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.about-content p {
+    margin-bottom: 1rem;
+    line-height: 1.6;
+}
+
+/* News Grid Styles */
+.news-grid {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.news-card {
+    background: var(--glass-background);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    border-radius: 10px;
+    border: var(--glass-border);
+    box-shadow: var(--glass-shadow);
+    padding: 1rem;
+    text-align: center;
+}
+
+.news-card img {
+    width: 100%;
+    border-radius: 5px;
+    margin-bottom: 1rem;
+}
+
+/* News Article Styles */
+.news-article {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.article-meta {
+    font-style: italic;
+    color: var(--secondary-color);
+    margin-bottom: 1rem;
+}
+
+.news-article figure {
+    margin: 2rem 0;
+}
+
+.news-article img, .news-article video {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.news-article figcaption {
+    text-align: center;
+    margin-top: 0.5rem;
+    font-style: italic;
+}
+
+.news-article ul {
+    margin-left: 2rem;
+    margin-bottom: 1rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .about, .news-grid, .news-article {
+        padding: 1rem;
+    }
+}
+
+/* Featured Games Styles */
+.featured-games {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.game-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    justify-content: center;
+}
+
+.game-card {
+    width: 100%;
+    max-width: 500px; /* Adjust this value as needed */
+    background: var(--glass-background);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    border-radius: 10px;
+    border: var(--glass-border);
+    box-shadow: var(--glass-shadow);
+    padding: 1rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.game-card img {
+    width: 100%;
+    height: 512px; /* Adjust this value as needed */
+    object-fit: cover;
+    border-radius: 5px;
+    margin-bottom: 1rem;
+}
+
+/* Responsive adjustment */
+@media (max-width: 1024px) {
+    .game-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .game-card {
+        max-width: 100%;
+    }
+}
+/* Games List Page Styles */
+.games-list {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.games-list .game-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    justify-content: center;
+}
+
+.games-list .game-card {
+    width: 100%;
+    max-width: 512px; /* Adjust this value as needed */
+	max-height: 512px;
+    /* Other properties remain the same as .game-card above */
+}
+
+/* Responsive adjustment for games list */
+@media (max-width: 1024px) {
+    .games-list .game-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .games-list .game-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .games-list .game-card {
+        max-width: 100%;
+    }
+}

@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Careers - Nexo Games Studios</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="assets/NexoGamesLogo.svg" alt="Nexo Games Studios Logo">
+            </div>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="games.html">Games</a></li>
+                <li><a href="news.html">News</a></li>
+                <li><a href="careers.html">Careers</a></li>
+                <li><a href="about.html">About</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="careers">
+            <h1>Join Our Team</h1>
+            <div class="careers-content">
+                <img src="assets/Careers.avif" alt="Join Our Team" class="careers-image">
+                <div class="job-listings">
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h3>Game Development</h3>
+                            <span class="plus-sign">+</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Join our talented team of game developers and writers and create groundbreaking experiences for players worldwide.</p>
+                            <ul>
+                                <li>Programmer</li>
+                                <li>Story Writer</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h3>Art & Animation</h3>
+                            <span class="plus-sign">+</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Bring our game worlds to life with stunning visuals and captivating animations.</p>
+                            <ul>
+                                <li>3D Modeler / Designer</li>
+                                <li>3D Animator</li>
+                                <li>Concept Artist</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h3>Marketing & PR</h3>
+                            <span class="plus-sign">+</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Help us share our passion for gaming with the world and connect with our amazing community.</p>
+                            <ul>
+                                <li>Discord Moderator</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-logo">
+            <img src="assets/NexoGamesLogo.svg" alt="Nexo Games Studios Logo">
+        </div>
+        <div class="social-links">
+            <a href="https://github.com/Nexo-Games-Studios" class="social-icon">GitHub</a>
+            <a href="https://discord.gg/83SNkr6SeP" class="social-icon">Discord</a>
+        </div>
+    </footer>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const faqItems = document.querySelectorAll('.faq-item');
+
+    faqItems.forEach(item => {
+        const question = item.querySelector('.faq-question');
+        const answer = item.querySelector('.faq-answer');
+
+        question.addEventListener('click', function() {
+            const isActive = item.classList.contains('active');
+
+            // Close all other open FAQ items
+            faqItems.forEach(otherItem => {
+                if (otherItem !== item && otherItem.classList.contains('active')) {
+                    toggleItem(otherItem, false);
+                }
+            });
+
+            // Toggle the clicked FAQ item
+            toggleItem(item, !isActive);
+        });
+    });
+
+    function toggleItem(item, open) {
+        const answer = item.querySelector('.faq-answer');
+        
+        if (open) {
+            item.classList.add('active');
+            answer.style.height = answer.scrollHeight + 'px';
+        } else {
+            answer.style.height = answer.scrollHeight + 'px'; // Set the height to its current value
+            item.classList.remove('active');
+            
+            // Trigger reflow
+            answer.offsetHeight;
+            
+            answer.style.height = '0px';
+        }
+
+        // Reset height after transition (for responsive design purposes)
+        answer.addEventListener('transitionend', function() {
+            if (item.classList.contains('active')) {
+                answer.style.height = 'auto';
+            }
+        }, { once: true });
+    }
+});
+</script>
+</body>
+</html>
