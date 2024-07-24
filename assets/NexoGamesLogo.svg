@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
 <svg width="100%" height="100%" viewBox="0 0 1637 350" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;">
-    <g id="NGE_1" transform="matrix(0.579,0,0,0.579,1.93778,1.96366)">
+    <g id="NGE_1" transform="matrix(0.579,0,0,0.579,-10.0509,1.96366)">
         <use xlink:href="#_Image1" x="0" y="0" width="594px" height="590px"/>
     </g>
-    <g transform="matrix(1.36367,0,0,1.36367,-245.074,-14.221)">
+    <g transform="matrix(1.36367,0,0,1.36367,-260.332,-40.3781)">
         <g transform="matrix(146.663,0,0,146.663,1395.74,130.315)">
         </g>
         <text x="411.195px" y="130.315px" style="font-family:'AquireBold', 'Aquire';font-weight:700;font-size:146.663px;fill:white;">Ne<tspan x="595.844px 696.894px " y="130.315px 130.315px ">xo</tspan> G<tspan x="973.207px 1097.14px 1199.21px 1293.96px " y="130.315px 130.315px 130.315px 130.315px ">ames</tspan></text>
     </g>
-    <g transform="matrix(2.49447,0,0,2.89852,-406.666,-513.461)">
+    <g transform="matrix(2.49447,0,0,2.89852,-421.925,-539.618)">
         <g transform="matrix(64,0,0,64,823.907,285.078)">
         </g>
         <text x="545.251px" y="285.078px" style="font-family:'AquireRegular', 'Aquire';font-size:64px;fill:white;">Studio<tspan x="780.195px " y="285.078px ">s</tspan></text>
