@@ -132,8 +132,6 @@ footer {
     margin-left: 1rem;
 }
 
-/* Continuation of style.css */
-
 /* Game Description Page */
 .game-hero {
     position: relative;
@@ -305,8 +303,6 @@ footer {
     }
 }
 
-/* Add these new styles and animations to your existing style.css file */
-
 /* General Animations */
 @keyframes fadeIn {
     from { opacity: 0; }
@@ -338,7 +334,6 @@ h1, h2, h3 {
 }
 
 /* FAQ Dropdown Animation */
-/* FAQ Dropdown Styles and Animation */
 .faq-item {
     margin-bottom: 1rem;
 }
@@ -487,7 +482,7 @@ h1, h2, h3 {
 
 .game-card {
     width: 100%;
-    max-width: 500px; /* Adjust this value as needed */
+    max-width: 500px;
     background: var(--glass-background);
     backdrop-filter: blur(4px);
     -webkit-backdrop-filter: blur(4px);
@@ -503,7 +498,7 @@ h1, h2, h3 {
 
 .game-card img {
     width: 100%;
-    height: 512px; /* Adjust this value as needed */
+    height: 512px;
     object-fit: cover;
     border-radius: 5px;
     margin-bottom: 1rem;
@@ -535,24 +530,21 @@ h1, h2, h3 {
 
 .games-list .game-card {
     width: 100%;
-    max-width: 512px; /* Adjust this value as needed */
+    max-width: 512px;
 	max-height: 512px;
-    /* Other properties remain the same as .game-card above */
 }
 
 /* Responsive adjustment for games list */
 @media (max-width: 1024px) {
     .games-list .game-grid {
         grid-template-columns: repeat(2, 1fr);
+		max-width: calc(2 * 512px + 2rem);
     }
 }
 
 @media (max-width: 768px) {
     .games-list .game-grid {
+		max-width: 100%;
         grid-template-columns: 1fr;
-    }
-
-    .games-list .game-card {
-        max-width: 100%;
     }
 }
